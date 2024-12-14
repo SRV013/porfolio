@@ -1,0 +1,19 @@
+---
+import Badge from "./Badge.astro";
+const { id } = Astro.props;
+---
+
+<section class="flex gap-10" id={id}>
+    <img class="rounded-xl w-24 h-24" src="./foto.jpg" alt="my picture" />
+    <div class="flex flex-col gap-3 ">
+        <div class="flex gap-8">
+            <h1 class="text-3xl font-semibold">Andrés Markovic'</h1>
+            <Badge value="Disponible" color="sec" />
+        </div>
+        <p class="text-lg text-zinc-400">
+            Analista de Sistemas con mas 20 años de experiencia en programacion.
+            Especializado en el desarrollo y diseño de aplicaciones web
+            modernas.
+        </p>
+    </div>
+</section>

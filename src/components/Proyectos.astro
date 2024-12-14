@@ -1,0 +1,131 @@
+---
+import Tag from "../components/Tags.astro";
+import Badge from "./Badge.astro";
+const { id } = Astro.props;
+---
+
+<section class="flex flex-col gap-3" id={id}>
+    <Tag value="Proyectos" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <span class="relative group cursor-pointer">
+            <img src="proyecto1.jpg" alt="proyecto1" class="w-full" />
+            <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+            >
+            </div>
+            <span
+                class="absolute inset-0 flex flex-col gap-1 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+                <div class="flex gap-2">
+                    <Badge value="PHP" />
+                    <Badge value="Angular" />
+                    <Badge value="JavaScript" />
+                </div>
+                <a
+                    href="http://yamipc.com"
+                    class="hover:text-[#facc15] transition">Visitar App</a
+                >
+            </span>
+        </span>
+        <span class="relative group cursor-pointer">
+            <img src="proyecto2.jpg" alt="proyecto1" class="w-full" />
+            <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+            >
+            </div>
+            <span
+                class="absolute inset-0 flex flex-col gap-1 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+                <div class="flex gap-2">
+                    <Badge value="PHP" />
+                    <Badge value="MySql" />
+                    <Badge value="JavaScript" />
+                </div>
+                <a
+                    href="http://yamipcadmin.com.ar"
+                    class="hover:text-[#facc15] transition">Visitar App</a
+                >
+            </span>
+        </span>
+        <span class="relative group cursor-pointer">
+            <img src="proyecto3.jpg" alt="proyecto1" class="w-full" />
+            <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+            >
+            </div>
+            <span
+                class="absolute inset-0 flex flex-col gap-1 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+                <div class="flex gap-2">
+                    <Badge value="JavaScript" />
+                    <Badge value="Next.js" />
+                    <Badge value="CSS" />
+                </div>
+                <a
+                    href="https://yamipc-admin.vercel.app/"
+                    class="hover:text-[#facc15] transition">Visitar App</a
+                >
+            </span>
+        </span>
+        <span class="relative group cursor-pointer">
+            <img src="proyecto4.jpg" alt="proyecto1" class="w-full" />
+            <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+            >
+            </div>
+            <span
+                class="absolute inset-0 flex flex-col gap-1 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+                <div class="flex gap-2">
+                    <Badge value="Next.js" />
+                    <Badge value="JavaScript" />
+                    <Badge value="Styled Componet" />
+                </div>
+                <a
+                    href="https://yamipc.vercel.app/"
+                    class="hover:text-[#facc15] transition">Visitar App</a
+                >
+            </span>
+        </span>
+        <span class="relative group cursor-pointer">
+            <img src="proyecto5.jpg" alt="proyecto1" class="w-full" />
+            <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+            >
+            </div>
+            <span
+                class="absolute inset-0 flex flex-col gap-1 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+                <div class="flex gap-2">
+                    <Badge value="CSS" />
+                    <Badge value="Next.js" />
+                    <Badge value="JavaScript" />
+                </div>
+                <a
+                    href="https://main.d27fwhyd6vum0t.amplifyapp.com/"
+                    class="hover:text-[#facc15] transition">Visitar App</a
+                >
+            </span>
+        </span>
+        <span class="relative group cursor-pointer">
+            <img src="proyecto6.jpg" alt="proyecto1" class="w-full" />
+            <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+            >
+            </div>
+            <span
+                class="absolute inset-0 flex flex-col gap-1 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+                <div class="flex gap-2">
+                    <Badge value="CSS" />
+                    <Badge value="Next.js" />
+                    <Badge value="JavaScript" />
+                </div>
+                <a
+                    href="http://yanijuan.com.ar"
+                    class="hover:text-[#facc15] transition">Visitar App</a
+                >
+            </span>
+        </span>
+    </div>
+</section>
