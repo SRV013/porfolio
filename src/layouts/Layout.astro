@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 const { title } = Astro.props;
-import { ClientRouter } from 'astro:transitions';
+// import { ClientRouter } from 'astro:transitions';
 import "@fontsource-variable/cairo";
 ---
 
@@ -13,7 +13,7 @@ import "@fontsource-variable/cairo";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<!-- <meta name="generator" content={Astro.generator} /> -->
 		<title>{title}</title>
-		<ClientRouter />
+		<!-- <ClientRouter /> -->
 	</head>
 	<body>
 		<Header />
