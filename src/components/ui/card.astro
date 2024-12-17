@@ -1,38 +1,54 @@
 ---
 import Badge from "../Badge.astro";
-const { bangle = "", Link = "" , img } = Astro.props;
+const { bangle = "", Link = "", img } = Astro.props;
 const banglesList = bangle.split(",");
 ---
-<span class="relative group cursor-pointer dark:bg-blue-900 bg-zinc-200 rounded-lg">
+
+<span
+    class="relative
+    rounded-lg
+    group
+    cursor-pointer
+    dark:bg-blue-900 bg-zinc-200"
+>
     <img src={img} alt={img} class="w-full object-cover" />
     <div
-        class="absolute inset-0 dark:bg-blue-900 bg-zinc-900 opacity-0 group-hover:opacity-70 transition-opacity"
+        class="absolute inset-0 dark:bg-blue-900
+        bg-zinc-900
+        opacity-0
+        group-hover:opacity-70
+        transition-opacity"
     >
     </div>
     <span
-        class="absolute inset-0 flex flex-col gap-3 items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
+        class="absolute inset-0
+        flex flex-col gap-3 items-center justify-center
+        text-white text-lg
+        opacity-0
+        group-hover:opacity-100
+        transition-opacity"
     >
         {
             Link && (
                 <a
                     href={Link}
-                    target="_blank" 
-                    class="text-black dark:text-white hover:text-blue-500 transition"
+                    target="_blank"
+                    class="text-black dark:text-white"
                 >
                     <Badge value="Preview" color="sec" />
                 </a>
             )
         }
-    <div class="absolute bottom-2 p-4 flex flex-col gap-2">
-        <div class="flex gap-1 flex-wrap justify-star">
-            {banglesList.map((item: any) => <Badge value={item.trim()} />)}
-        </dir>
-    </div>
+        <div class="absolute bottom-2 p-4 flex flex-col gap-2">
+            <div class="flex gap-1 flex-wrap justify-star">
+                {banglesList.map((item: any) => <Badge value={item.trim()} />)}
+            </div>
+        </div>
     </span>
 </span>
 <style>
     img {
         padding: 20px;
-        mask-image: linear-gradient(black 40%, transparent);
+        mask-image: linear-gradient(black 70%, transparent);
     }
 </style>

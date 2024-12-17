@@ -11,24 +11,32 @@ import Php from "./icons/php.astro";
 import Mysql from "./icons/mysql.astro";
 const { value, color } = Astro.props;
 const bgColor =
-    color === "sec" ? "dark:bg-[#1e1b4b] bg-zinc-400" : "bg-slate-900";
+    color === "sec"
+        ? "dark:bg-indigo-900 bg-zinc-200"
+        : "dark:bg-indigo-950 bg-indigo-900";
+const pxy = color === "sec" ? "px-4 py-2" : "px-2 py-1";
+const hover =
+    color === "sec" && "hover:text-blue-500 transition hover:underline";
 ---
 
 <div class="flex items-center">
     <span
-        class={`flex gap-2 items-center text-sm px-2 py-1 rounded-md ${bgColor}`}
+        class={`flex gap-2 items-center ${pxy} 
+        text-sm font-semibold 
+        rounded-md 
+        ${hover}
+        ${bgColor}`}
     >
-        {value === "JavaScript" && <Js md/>}
-        {value === "PHP" && <Php md/>}
-        {value === "CSS" && <Css md/>}
-
-        {value === "MySql" && <Mysql md/>}
-        {value === "Aws" && <Aws md/>}
-        {value === "React" && <React md/>}
-        {value === "Tailwaing" && <Tailwaing md/>}
-        {value === "Next.js" && <Nextjs md/>}
-        {value === "Astro" && <AstroIcon md/>}
-        {value === "Html" && <Html md/>}
+        {value === "JavaScript" && <Js md />}
+        {value === "PHP" && <Php md />}
+        {value === "CSS" && <Css md />}
+        {value === "MySql" && <Mysql md />}
+        {value === "Aws" && <Aws md />}
+        {value === "React" && <React md />}
+        {value === "Tailwaing" && <Tailwaing md />}
+        {value === "Next.js" && <Nextjs md />}
+        {value === "Astro" && <AstroIcon md />}
+        {value === "Html" && <Html md />}
         {value}
     </span>
 </div>
