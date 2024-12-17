@@ -3,10 +3,10 @@ import Badge from "../Badge.astro";
 const { bangle = "", Link = "" , img } = Astro.props;
 const banglesList = bangle.split(",");
 ---
-<span class="relative group cursor-pointer dark:bg-blue-900 bg-zinc-600 rounded-lg">
+<span class="relative group cursor-pointer dark:bg-blue-900 bg-zinc-200 rounded-lg">
     <img src={img} alt={img} class="w-full object-cover" />
     <div
-        class="absolute inset-0 dark:bg-blue-900 bg-black opacity-0 group-hover:opacity-70 transition-opacity"
+        class="absolute inset-0 dark:bg-blue-900 bg-zinc-900 opacity-0 group-hover:opacity-70 transition-opacity"
     >
     </div>
     <span
@@ -23,8 +23,7 @@ const banglesList = bangle.split(",");
                 </a>
             )
         }
-    <div class="absolute bottom-5 p-4 flex flex-col gap-2">
-        <Badge value="Lenguajes" />
+    <div class="absolute bottom-2 p-4 flex flex-col gap-2">
         <div class="flex gap-1 flex-wrap justify-star">
             {banglesList.map((item: any) => <Badge value={item.trim()} />)}
         </dir>
