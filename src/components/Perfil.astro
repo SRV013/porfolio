@@ -1,19 +1,56 @@
 ---
-import Badge from "./Badge.astro";
+import Linkedin from "./icons/linkedin.astro";
+import Email from "./icons/email.astro";
 const { id } = Astro.props;
 ---
 
-<section class="flex gap-10" id={id}>
-    <img class="rounded-xl w-24 h-24" src="./foto.jpg" alt="my picture" />
-    <div class="flex flex-col gap-3 ">
-        <div class="flex gap-8">
-            <h1 class="text-3xl font-semibold">Andrés Markovic'</h1>
-            <Badge value="Disponible" color="sec" />
-        </div>
-        <p class="text-lg text-zinc-400">
-            Analista de Sistemas con mas 20 años de experiencia en programacion.
-            Especializado en el desarrollo y diseño de aplicaciones web
-            modernas.
-        </p>
+<section id={id} class="grid-container">
+    <img class="profile-img" src="./foto.png" alt="Andrés Markovic" />
+    <h1 class="name">Andrés Markovic</h1>
+    <p class="description">
+        Analista de Sistemas con más de 20 años de experiencia en programación.
+        Especializado en el desarrollo y diseño de aplicaciones web modernas.
+    </p>
+    <div class="icons">
+        <Linkedin />
+        <Email />
     </div>
 </section>
+
+<style>
+    /* Diseño base para pantallas grandes */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .profile-img {
+        grid-row: span 3;
+        border-radius: 50%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .description {
+        color: #71717a;
+    }
+
+    .icons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    @media (max-width: 700px) {
+        .grid-container {
+            grid-template-columns: 70px 1fr;
+        }
+    }
+</style>
