@@ -5,12 +5,33 @@ const { id } = Astro.props;
 ---
 
 <section class="flex flex-col gap-2" id={id}>
-    <Tag value="Experiencia" />
+    <div class="flex gap-3 items-center">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            ></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"
+            ></path><path d="M12 12l0 .01"></path><path
+                d="M3 13a20 20 0 0 0 18 0"></path></svg
+        >
+        <Tag value="Experiencia" />
+    </div>
     <div
         class="flex flex-col gap-2 text-lg text-zinc-400 [&>span>p>strong]:text-yellow-400 [&>span>p>strong]:font-medium"
     >
         <span>
-            <div class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500">
+            <div
+                class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500"
+            >
                 <Star />
                 <h2 class="text-sm">2006 / 2008</h2>
             </div>
@@ -22,7 +43,9 @@ const { id } = Astro.props;
             </p>
         </span>
         <span>
-            <div class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500">
+            <div
+                class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500"
+            >
                 <Star />
                 <h2 class="text-sm">2008 / 2010</h2>
             </div>
@@ -34,7 +57,9 @@ const { id } = Astro.props;
             </p>
         </span>
         <span>
-            <div class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500">
+            <div
+                class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500"
+            >
                 <Star />
                 <h2 class="text-sm">2018 / 2019</h2>
             </div>
@@ -45,7 +70,9 @@ const { id } = Astro.props;
             </p>
         </span>
         <span>
-            <div class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500">
+            <div
+                class="flex gap-2 items-center dark:text-yellow-400 text-yellow-500"
+            >
                 <Star />
                 <h2 class="text-sm">2020 / Actualidad</h2>
             </div>
