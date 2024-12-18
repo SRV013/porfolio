@@ -6,10 +6,13 @@ const { id } = Astro.props;
 
 <section id={id} class="grid-container">
     <img class="profile-img" src="./foto2.JPG" alt="Andrés Markovic" />
-    <h1 class="name">Andrés Markovic</h1>
+    <div class="name">
+        <h1>Andrés Markovic</h1>
+        <h2>Analista de Sistemas</h2>
+    </div>
     <p class="description">
-        Analista de Sistemas con más de 20 años de experiencia en programación.
-        Especializado en el desarrollo y diseño de aplicaciones web modernas.
+        +20 años de experiencia en programación. Especializado en el desarrollo
+        y diseño de aplicaciones web modernas.
     </p>
     <div class="icons">
         <Linkedin />
@@ -20,36 +23,61 @@ const { id } = Astro.props;
 <style>
     .grid-container {
         display: grid;
-        grid-template-columns: 150px 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 1rem;
-        align-items: start;
+        grid-template-areas:
+            "img name"
+            "img description"
+            "img action";
+        column-gap: 2rem;
+        row-gap: 1rem;
+        justify-items: start;
+        /* align-items: stretch; */
     }
 
     .profile-img {
-        grid-row: span 3;
-        border-radius: 15px;
+        grid-area: img;
+        max-width: 120px;
+        border-radius: 10px;
         width: 100%;
         object-fit: cover;
+        margin-top: 10px;
     }
 
     .name {
-        font-size: 1.5rem;
+        grid-area: name;
+    }
+    .name h1 {
+        font-size: 1.8rem;
         font-weight: 600;
+    }
+    .name h2 {
+        font-weight: 100;
     }
 
     .description {
+        grid-area: description;
         color: #71717a;
     }
 
     .icons {
+        grid-area: action;
         display: flex;
         gap: 0.5rem;
     }
 
     @media (max-width: 700px) {
         .grid-container {
-            grid-template-columns: 70px 1fr;
+            grid-template-columns: 70px auto;
+            grid-template-areas:
+                "img name"
+                "description description"
+                "action action";
+            column-gap: 1rem;
+            row-gap: 0.5rem;
+        }
+        .profile-img {
+            margin: unset;
+            max-width: 70px;
+            border-radius: 50%;
         }
     }
 </style>
