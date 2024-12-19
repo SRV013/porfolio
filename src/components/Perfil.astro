@@ -23,14 +23,13 @@ const { id } = Astro.props;
 <style>
     .grid-container {
         display: grid;
+        grid-template-columns: 160px auto;
         grid-template-areas:
             "img name"
             "img description"
             "img action";
-        column-gap: 2rem;
-        row-gap: 1rem;
+        row-gap: 10px;
         justify-items: start;
-        /* align-items: stretch; */
     }
 
     .profile-img {
@@ -46,34 +45,34 @@ const { id } = Astro.props;
         grid-area: name;
     }
     .name h1 {
-        font-size: 1.8rem;
+        font-size: 34px;
         font-weight: 600;
     }
     .name h2 {
+        font-size: 20px;
         font-weight: 100;
     }
 
     .description {
         grid-area: description;
-        font-size: 1.2rem;
+        font-size: 20px;
         color: #71717a;
     }
-
+    
     .icons {
         grid-area: action;
         display: flex;
-        gap: 0.5rem;
+        gap: 12px;
     }
 
     @media (max-width: 700px) {
         .grid-container {
-            grid-template-columns: 70px auto;
+            grid-template-columns: 100px auto;
             grid-template-areas:
                 "img name"
                 "description description"
                 "action action";
-            column-gap: 1rem;
-            row-gap: 0.5rem;
+            row-gap: 10px;
         }
         .profile-img {
             margin: unset;
