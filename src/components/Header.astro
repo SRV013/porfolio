@@ -19,14 +19,24 @@ const navItems = [
         title: "Sobre mí",
         label: "sobre-mi",
         url: "/#sobre-mi",
-    }
+    },
 ];
 ---
 
 <header
-    class="fixed flex justify-end items-center p-4 w-full max-w-screen-lg z-10 backdrop-blur-sm"
+    class="fixed
+    flex justify-end items-center
+    p-4 w-full max-w-screen-lg z-10
+    backdrop-blur-sm"
 >
-    <nav class="flex gap-4 px-3 py-2 rounded-3xl dark:bg-[#1e1b4b] bg-zinc-200 max-sm:gap-2 max-sm:py-1">
+    <nav
+        class="flex gap-4
+    px-3 py-2
+    max-sm:gap-2
+    max-sm:py-2
+    rounded-3xl
+    dark:bg-[#1e1b4b] bg-zinc-200"
+    >
         {
             navItems.map((link) => (
                 <a

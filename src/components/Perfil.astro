@@ -4,17 +4,17 @@ import Email from "./icons/email.astro";
 const { id } = Astro.props;
 ---
 
-<section id={id} class="grid-container">
+<section id={id} class="grid-container grid gap-y-2.5">
     <img class="profile-img" src="./foto2.JPG" alt="Andrés Markovic" />
     <div class="name">
-        <h1>Andrés Markovic</h1>
-        <h2>Analista de Sistemas</h2>
+        <h1 class="text-4xl font-semibold">Andrés Markovic</h1>
+        <h2 class="text-xl font-thin">Analista de Sistemas</h2>
     </div>
-    <p class="description">
+    <p class="description text-zinc-400 text-xl">
         +20 años de experiencia en programación. Especializado en el desarrollo
         y diseño de aplicaciones web modernas.
     </p>
-    <div class="icons">
+    <div class="icons flex gap-3">
         <Linkedin />
         <Email />
     </div>
@@ -22,13 +22,11 @@ const { id } = Astro.props;
 
 <style>
     .grid-container {
-        display: grid;
         grid-template-columns: 160px auto;
         grid-template-areas:
             "img name"
             "img description"
             "img action";
-        row-gap: 10px;
         justify-items: start;
     }
 
@@ -37,32 +35,20 @@ const { id } = Astro.props;
         max-width: 120px;
         border-radius: 10px;
         width: 100%;
-        object-fit: cover;
         margin-top: 10px;
+        object-fit: cover;
     }
 
     .name {
         grid-area: name;
     }
-    .name h1 {
-        font-size: 34px;
-        font-weight: 600;
-    }
-    .name h2 {
-        font-size: 20px;
-        font-weight: 100;
-    }
 
     .description {
         grid-area: description;
-        font-size: 20px;
-        color: #71717a;
     }
-    
+
     .icons {
         grid-area: action;
-        display: flex;
-        gap: 12px;
     }
 
     @media (max-width: 700px) {
@@ -72,7 +58,6 @@ const { id } = Astro.props;
                 "img name"
                 "description description"
                 "action action";
-            row-gap: 10px;
         }
         .profile-img {
             margin: unset;
