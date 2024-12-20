@@ -40,7 +40,7 @@ const banglesList = bangle.split(",");
                 </a>
             )
         }
-        <div class="absolute bottom-2 p-4 flex flex-col gap-2">
+        <div class="absolute bottom-1 p-4 md:p-1 flex flex-col gap-2">
             <div class="flex gap-1 flex-wrap justify-center">
                 {banglesList.map((item: any) => <Badge value={item.trim()} />)}
             </div>
