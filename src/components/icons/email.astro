@@ -2,17 +2,31 @@
     class="group
     flex
     gap-2 px-3 py-2
-    dark:bg-[#1e1b4b] bg-zinc-200
+    dark:bg-[#1e1b4b] 
+    bg-zinc-200
     hover:dark:bg-blue-800
     hover:bg-zinc-400
     active:scale-95
     cursor-pointer
-    transition rounded-xl"
+    transition
+    rounded-xl
+    overflow-hidden
+    relative
+    "
+
+    onclick=" 
+        (async () => {
+            try {
+                await navigator.clipboard.writeText('srv013@gmail.com');
+                alert(`El email: srv013@gmail.com fue copiado al portapapeles !!!`);
+            } catch (err) {
+                console.error('Error al copiar: ', err);
+                alert('Hubo un error al copiar el correo.');
+            }})();"
 >
-    <div class="relative overflow-hidden w-32">
-        <div
-            class="flex gap-2 group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
-        >
+<div
+class="flex gap-2 group-hover:-translate-y-9 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -30,36 +44,9 @@
             >
             Contactame
         </div>
-        <div
-            onclick=" 
-        (async () => {
-            try {
-                await navigator.clipboard.writeText('srv013@gmail.com');
-                alert(`El email: srv013@gmail.com fue copiado al portapapeles !!!`);
-            } catch (err) {
-                console.error('Error al copiar: ', err);
-                alert('Hubo un error al copiar el correo.');
-            }})();"
-            class="flex gap-2 absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+        <div 
+            class="flex gap-1 absolute items-center top-12 left-5 text-xs group-hover:top-3 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
         >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-copy"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                    d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"
-                ></path><path
-                    d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"
-                ></path></svg
-            >
-            <div>Copiar eMail</div>
+            <div>Copiar Portapapeles</div>
         </div>
-    </div>
 </div>
