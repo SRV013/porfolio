@@ -5,54 +5,50 @@ const { id } = Astro.props;
 ---
 
 <section class="flex flex-col gap-3" id={id}>
-    <div class="flex gap-1 items-center">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-perspective"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M6.141 4.163l12 1.714a1 1 0 0 1 .859 .99v10.266a1 1 0 0 1 -.859 .99l-12 1.714a1 1 0 0 1 -1.141 -.99v-13.694a1 1 0 0 1 1.141 -.99z"
-            ></path></svg
-        >
-        <Tag value="Proyectos" />
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        <Card
-            bangle="PHP,Aws,CSS"
-            Link="http://yamipc.com"
-            img="proyecto1.jpg"
-        />
-        <Card
-            bangle="PHP,MySql,JavaScript"
-            Link="http://www.yamipcadmin.com.ar/"
-            img="proyecto2.jpg"
-        />
-        <Card
-            bangle="React,Next.js,CSS"
-            Link="https://yamipc-admin.vercel.app/"
-            img="proyecto3.jpg"
-        />
-        <Card
-            bangle="Html,Next.js,Styled Componet"
-            Link="https://yamipc.vercel.app/"
-            img="proyecto4.jpg"
-        />
-        <Card
-            bangle="React,Next.js,CSS"
-            Link="https://main.d27fwhyd6vum0t.amplifyapp.com/"
-            img="proyecto5.jpg"
-        />
-        <Card
-            bangle="Html,CSS,Aws"
-            Link="http://yanijuan.com.ar"
-            img="proyecto6.jpg"
-        />
-    </div>
+  <div class="flex gap-1 items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-perspective"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M6.141 4.163l12 1.714a1 1 0 0 1 .859 .99v10.266a1 1 0 0 1 -.859 .99l-12 1.714a1 1 0 0 1 -1.141 -.99v-13.694a1 1 0 0 1 1.141 -.99z"
+      ></path></svg
+    >
+    <Tag value="Proyectos" />
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    <Card bangle="PHP,Aws,CSS" Link="http://yamipc.com" img="proyecto1.jpg" />
+    <Card
+      bangle="React,Aws,CSS"
+      Link="https://www.provemix.com.ar"
+      img="proyecto2.jpg"
+    />
+    <Card
+      bangle="Astro,MySql,Aws"
+      Link="https://www.estudiordb.com.ar"
+      img="proyecto3.jpg"
+    />
+    <Card
+      bangle="Html,Next.js,Styled Componet"
+      Link="https://yamipc.vercel.app/"
+      img="proyecto4.jpg"
+    />
+    <Card
+      bangle="React,Next.js,CSS"
+      Link="https://main.d27fwhyd6vum0t.amplifyapp.com/"
+      img="proyecto5.jpg"
+    />
+    <Card
+      bangle="Html,CSS,Aws"
+      Link="http://yanijuan.com.ar"
+      img="proyecto6.jpg"
+    />
+  </div>
 </section>
