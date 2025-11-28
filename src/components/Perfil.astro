@@ -5,66 +5,38 @@ import Cv from "./icons/cv.astro";
 const { id } = Astro.props;
 ---
 
-<section id={id} class="grid-container grid gap-y-2.5">
-    <img class="profile-img" src="./foto2.JPG" alt="Andrés Markovic" />
-    <div class="name">
-        <h1 class="text-4xl font-semibold">Andrés Markovic</h1>
-        <h2 class="text-xl font-thin">Analista de Sistemas</h2>
+<section
+    id={id}
+    class="flex flex-col-reverse md:flex-row gap-8 items-center md:items-start justify-between py-12"
+>
+    <div class="flex flex-col gap-4 max-w-2xl">
+        <div class="space-y-2">
+            <h1
+                class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+                Andrés Markovic
+            </h1>
+            <h2 class="text-2xl font-medium text-blue-600 dark:text-blue-400">
+                Analista de Sistemas
+            </h2>
+        </div>
+        <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            +20 años de experiencia en programación. Especializado en el
+            desarrollo y diseño de aplicaciones web modernas.
+        </p>
+        <div class="flex gap-4 mt-4">
+            <Linkedin />
+            <Email />
+            <Cv />
+        </div>
     </div>
-    <p class="description text-zinc-400 text-xl">
-        +20 años de experiencia en programación. Especializado en el desarrollo
-        y diseño de aplicaciones web modernas.
-    </p>
-    <div class="icons flex gap-3">
-        <Linkedin />
-        <Email />
-        <Cv />
-    </div>
+    <img
+        class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg border-4 border-white dark:border-gray-800"
+        src="./foto2.JPG"
+        alt="Andrés Markovic"
+    />
 </section>
 
 <style>
-    .grid-container {
-        grid-template-columns: 160px auto;
-        grid-template-areas:
-            "img name"
-            "img description"
-            "img action";
-        justify-items: start;
-    }
-
-    .profile-img {
-        grid-area: img;
-        max-width: 120px;
-        border-radius: 10px;
-        width: 100%;
-        margin-top: 10px;
-        object-fit: cover;
-    }
-
-    .name {
-        grid-area: name;
-    }
-
-    .description {
-        grid-area: description;
-    }
-
-    .icons {
-        grid-area: action;
-    }
-
-    @media (max-width: 700px) {
-        .grid-container {
-            grid-template-columns: 100px auto;
-            grid-template-areas:
-                "img name"
-                "description description"
-                "action action";
-        }
-        .profile-img {
-            margin: unset;
-            max-width: 70px;
-            border-radius: 50%;
-        }
-    }
+    /* Custom styles if needed, but Tailwind handles most */
 </style>

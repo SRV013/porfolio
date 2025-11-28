@@ -4,26 +4,28 @@ import Card from "./ui/card.astro";
 const { id } = Astro.props;
 ---
 
-<section class="flex flex-col gap-3" id={id}>
-  <div class="flex gap-1 items-center">
+<section class="flex flex-col gap-8" id={id}>
+  <div
+    class="flex gap-3 items-center border-b pb-4 border-gray-200 dark:border-gray-700"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
+      width="32"
+      height="32"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-perspective"
+      class="text-blue-600 dark:text-blue-400"
       ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
         d="M6.141 4.163l12 1.714a1 1 0 0 1 .859 .99v10.266a1 1 0 0 1 -.859 .99l-12 1.714a1 1 0 0 1 -1.141 -.99v-13.694a1 1 0 0 1 1.141 -.99z"
       ></path></svg
     >
-    <Tag value="Proyectos" />
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Proyectos</h2>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <Card bangle="PHP,Aws,CSS" Link="http://yamipc.com" img="proyecto1.jpg" />
     <Card
       bangle="React,Aws,CSS"

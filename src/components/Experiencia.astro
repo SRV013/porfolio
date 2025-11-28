@@ -4,103 +4,147 @@ import Star from "../components/icons/star.astro";
 const { id } = Astro.props;
 ---
 
-<section class="flex flex-col gap-2" id={id}>
-  <div class="flex gap-1 items-center">
+<section class="flex flex-col gap-8" id={id}>
+  <div
+    class="flex gap-3 items-center border-b pb-4 border-gray-200 dark:border-gray-700"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
+      width="32"
+      height="32"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"
+      class="text-blue-600 dark:text-blue-400"
       ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
         d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
       ></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path
         d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg
     >
-    <Tag value="Experiencia" />
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+      Experiencia
+    </h2>
   </div>
+
   <div
-    class="flex flex-col gap-2 text-xl text-zinc-400 [&>span>p>strong]:text-blue-800 dark:[&>span>p>strong]:text-yellow-400 [&>span>p>strong]:font-medium"
+    class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-3 space-y-12"
   >
-    <span>
+    <div class="relative pl-8 group">
       <div
-        class="flex gap-2 items-center dark:text-yellow-400 dar:text-yellow-500 text-blue-800"
+        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 ring-4 ring-white dark:ring-gray-900"
       >
-        <Star />
-        <h2 class="text-sm">2023 / Actualidad</h2>
       </div>
-      <p>
-        En este período me enfoqué en ampliar mis conocimientos y experiencia
-        trabajando en equipo. Colaboré en proyectos grupales junto a otros
-        desarrolladores, asumiendo tareas asignadas mediante <strong
-          >Jira</strong
-        > y aprendiendo metodologías ágiles. También continué desarrollando páginas
-        web y aplicaciones complejas para terceros como <strong
-          >freelancer</strong
-        >, participando en todas las etapas del desarrollo: desde la
-        planificación hasta la entrega final.
-      </p>
-    </span>
-    <span>
+      <div class="flex flex-col gap-2">
+        <span
+          class="text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase"
+          >2023 / Actualidad</span
+        >
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+          Desarrollador Full Stack & Freelancer
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          En este período me enfoqué en ampliar mis conocimientos y experiencia
+          trabajando en equipo. Colaboré en proyectos grupales junto a otros
+          desarrolladores, asumiendo tareas asignadas mediante <strong
+            >Jira</strong
+          > y aprendiendo metodologías ágiles. También continué desarrollando páginas
+          web y aplicaciones complejas para terceros como <strong
+            >freelancer</strong
+          >, participando en todas las etapas del desarrollo: desde la
+          planificación hasta la entrega final.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative pl-8 group">
       <div
-        class="flex gap-2 items-center dark:text-yellow-400 dar:text-yellow-500 text-blue-800"
+        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-blue-600 dark:group-hover:bg-blue-400 transition-colors ring-4 ring-white dark:ring-gray-900"
       >
-        <Star />
-        <h2 class="text-sm">2020 / 2023</h2>
       </div>
-      <p>
-        Capacitación continua en tecnologías de desarrollo de software,
-        especializándome en programación Back-End y Front-End. Durante este
-        período he creado varias aplicaciones menores a modo de práctica y
-        entrenamiento, perfeccionando mis habilidades y explorando nuevas
-        tecnologías.
-      </p>
-    </span>
-    <span>
+      <div class="flex flex-col gap-2">
+        <span
+          class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase"
+          >2020 / 2023</span
+        >
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+          Capacitación y Desarrollo Personal
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          Capacitación continua en tecnologías de desarrollo de software,
+          especializándome en programación Back-End y Front-End. Durante este
+          período he creado varias aplicaciones menores a modo de práctica y
+          entrenamiento, perfeccionando mis habilidades y explorando nuevas
+          tecnologías.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative pl-8 group">
       <div
-        class="flex gap-2 items-center dark:text-yellow-400 dar:text-yellow-500 text-blue-800"
+        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-blue-600 dark:group-hover:bg-blue-400 transition-colors ring-4 ring-white dark:ring-gray-900"
       >
-        <Star />
-        <h2 class="text-sm">2018 / 2019</h2>
       </div>
-      <p>
-        Desarrollador del sistema administrativo de
-        <strong>yamipc.com</strong>, enfocado en la automatización de procesos
-        internos y gestión eficiente de recursos.
-      </p>
-    </span>
-    <span>
+      <div class="flex flex-col gap-2">
+        <span
+          class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase"
+          >2018 / 2019</span
+        >
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+          Desarrollador de Sistemas
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          Desarrollador del sistema administrativo de
+          <strong>yamipc.com</strong>, enfocado en la automatización de procesos
+          internos y gestión eficiente de recursos.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative pl-8 group">
       <div
-        class="flex gap-2 items-center dark:text-yellow-400 dar:text-yellow-500 text-blue-800"
+        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-blue-600 dark:group-hover:bg-blue-400 transition-colors ring-4 ring-white dark:ring-gray-900"
       >
-        <Star />
-        <h2 class="text-sm">2008 / 2010</h2>
       </div>
-      <p>
-        Asistente y programador Back-End en la aplicación
-        <strong>todoInsumos.com</strong>. Desarrollo y mantenimiento de un
-        sistema de gestión para artículos informáticos, optimizando procesos de
-        inventario y ventas.
-      </p>
-    </span>
-    <span>
+      <div class="flex flex-col gap-2">
+        <span
+          class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase"
+          >2008 / 2010</span
+        >
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+          Programador Back-End
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          Asistente y programador Back-End en la aplicación
+          <strong>todoInsumos.com</strong>. Desarrollo y mantenimiento de un
+          sistema de gestión para artículos informáticos, optimizando procesos
+          de inventario y ventas.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative pl-8 group">
       <div
-        class="flex gap-2 items-center dark:text-yellow-400 dar:text-yellow-500 text-blue-800"
+        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-blue-600 dark:group-hover:bg-blue-400 transition-colors ring-4 ring-white dark:ring-gray-900"
       >
-        <Star />
-        <h2 class="text-sm">2006 / 2008</h2>
       </div>
-      <p>
-        Desarrollador del sistema de gestión
-        <strong>ciberjuegos.com</strong>, trabajando con más de 50 tablas
-        relacionales en MySQL y utilizando PHP y JavaScript como lenguajes
-        principales para el desarrollo del código fuente.
-      </p>
-    </span>
+      <div class="flex flex-col gap-2">
+        <span
+          class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase"
+          >2006 / 2008</span
+        >
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+          Desarrollador Full Stack
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          Desarrollador del sistema de gestión
+          <strong>ciberjuegos.com</strong>, trabajando con más de 50 tablas
+          relacionales en MySQL y utilizando PHP y JavaScript como lenguajes
+          principales para el desarrollo del código fuente.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
